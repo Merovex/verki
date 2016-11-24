@@ -19,6 +19,7 @@ Author's tool
 1. Directory ends in ".verkaĵo" so "sample.verkaĵo"
 1. Project Configuration: "sample.verki-project"
 1. User Customization: "sample.verki-workspace"
+1. Files in Yaml format, like Jekyll.
 
 ### Outputs
 
