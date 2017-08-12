@@ -7,13 +7,29 @@
 		<link href='node_modules/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 
 		<script>
-	        // window.$ = window.jQuery = require('jquery');
+	        window.$ = window.jQuery = require('jquery');
 	    </script>
 	    <script src="node_modules/tether/dist/js/tether.min.js"></script>
-
+	    <style>
+	    	body {
+	    		margin-top: 56px;
+	    		overflow: hidden;
+	    	}
+	    	.sidebar {
+	    		max-height: calc(100vh - 56px);
+			    overflow-y: auto;
+	    	}
+	    	main {
+	    		background: #777;
+	    		max-height: calc(100vh - 56px);
+			    overflow-y: auto;
+	    	}
+	    </style>
 
 	</head>
 	<body>
+
+<!-- Top Navigation  -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,27 +47,106 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
-  <main>
-  	    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </main>
+</nav>
+
+<div class='container-fluid'>
+  <div class='row'>
+
+
+<!-- Binder Navigation -->
+<nav class="sidebar col-6 col-lg-2" id='binder'>
+	<div class="d-flex flex-column">
+	  <div class="p-2">Flex item 1</div>
+	  <div class="p-2">Flex item 2</div>
+	  <div class="p-2">Flex item 3</div>
+	  <div class="p-2">Flex item 1</div>
+	  <div class="p-2">Flex item 2</div>
+	  <div class="p-2">Flex item 3</div>
+	  <div class="p-2">Flex item 1</div>
+	  <div class="p-2">Flex item 2</div>
+	  <div class="p-2">Flex item 3</div>
+	  <div class="p-2">Flex item 1</div>
+	  <div class="p-2">Flex item 2</div>
+	  <div class="p-2">Flex item 3</div>
+	  <div class="p-2">Flex item 1</div>
+	  <div class="p-2">Flex item 2</div>
+	  <div class="p-2">Flex item 3</div>
+	  <div class="p-2">Flex item 1</div>
+	  <div class="p-2">Flex item 2</div>
+	  <div class="p-2">Flex item 3</div>
+	  <div class="p-2">Flex item 1</div>
+	  <div class="p-2">Flex item 2</div>
+	  <div class="p-2">Flex item 3</div>
+	  <div class="p-2">Flex item 1</div>
+	  <div class="p-2">Flex item 2</div>
+	  <div class="p-2">Flex item 3</div>
+	</div>
 </nav>
 
 
+<main class="col-12 col-sm-6 col-lg-10" role="main">
+  	We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+
+    <h1>HTML Ipsum Presents</h1>
+
+<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+<h2>Header Level 2</h2>
+
+<ol>
+   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+   <li>Aliquam tincidunt mauris eu risus.</li>
+</ol>
+
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+
+<h3>Header Level 3</h3>
+
+<ul>
+   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+   <li>Aliquam tincidunt mauris eu risus.</li>
+</ul>
+
+<pre><code>
+#header h1 a {
+  display: block;
+  width: 300px;
+  height: 80px;
+}
+</code></pre>
+
+<h1>HTML Ipsum Presents</h1>
+
+<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+<h2>Header Level 2</h2>
+
+<ol>
+   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+   <li>Aliquam tincidunt mauris eu risus.</li>
+</ol>
+
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+
+<h3>Header Level 3</h3>
+
+<ul>
+   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+   <li>Aliquam tincidunt mauris eu risus.</li>
+</ul>
+
+<pre><code>
+#header h1 a {
+  display: block;
+  width: 300px;
+  height: 80px;
+}
+</code></pre>
+</main>
+</div></div>
 	</body>
 </html>
