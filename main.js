@@ -5,6 +5,7 @@ const {
 const path = require('path')
 const url  = require('url')
 const windowStateKeeper = require('electron-window-state');
+require('electron-reload')(__dirname);
 
 let win;
 
