@@ -12,7 +12,9 @@
     "popper.js": "^1.11.1",
     "tether": "^1.4.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "devtron": "^1.4.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."

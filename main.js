@@ -27,6 +27,7 @@ function createWindow() {
 	// open devtools
 	// win.webContents.openDevTools();
 
+console.log(app.getName())
 	win.on('closed', function() { win = null; })
 }
 
@@ -34,6 +35,7 @@ app.on('ready', createWindow);
 
 // Quit when all windows are closed
 app.on('window-all-closed', function() {
+
 	if (process.platform != 'darwin') {
 		app.quit();
 	}
