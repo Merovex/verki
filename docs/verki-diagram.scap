@@ -1,46 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ScappleDocument Version="1.1" ID="60AD68F6-DC0E-4D9B-A32D-F96031168F32">
     <Notes>
-        <Note ID="0" FontSize="12.0" Position="288.0,206.0" Width="111.0">
+        <Note ID="0" FontSize="12.0" Position="207.535156,162.84375" Width="63.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>Document / Project
+            <String>Document
 - Sections</String>
-            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+            <ConnectedNoteIDs>6, 8</ConnectedNoteIDs>
         </Note>
-        <Note ID="1" FontSize="12.0" Position="504.0,187.0" Width="65.0">
+        <Note ID="1" FontSize="12.0" Position="506.0,211.0" Width="66.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
             <String>Section
 - Synopsis
+- Metadata
 - Text
-</String>
-            <ConnectedNoteIDs>0, 2</ConnectedNoteIDs>
+- Tags
+- Tasks</String>
+            <ConnectedNoteIDs>6-7, 20</ConnectedNoteIDs>
         </Note>
-        <Note ID="2" FontSize="12.0" Position="606.597656,144.964844" Width="34.0">
+        <Note ID="2" FontSize="12.0" Position="717.628906,218.804688" Width="47.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
             <String>Tags
 </String>
-            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+            <ConnectedNoteIDs>7</ConnectedNoteIDs>
         </Note>
-        <Note ID="4" FontSize="12.0" Position="293.460938,272.664062" Width="86.0">
+        <Note ID="4" FontSize="12.0" Position="212.535156,229.84375" Width="86.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
             <String>Research
 - Sections</String>
+            <ConnectedNoteIDs>6, 8</ConnectedNoteIDs>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="371.886719,230.40625" Width="68.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>section_list</String>
+            <ConnectedNoteIDs>0-1, 4, 9</ConnectedNoteIDs>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="626.226562,234.03125" Width="47.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>tag_list</String>
+            <ConnectedNoteIDs>1-2</ConnectedNoteIDs>
+        </Note>
+        <Note ID="8" FontSize="12.0" Position="104.0,228.0" Width="71.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Project
+- Document
+- Research
+- Trash
+- Tasks</String>
+            <ConnectedNoteIDs>0, 4, 9, 22</ConnectedNoteIDs>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="215.535156,313.84375" Width="39.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Trash
+</String>
+            <ConnectedNoteIDs>6, 8</ConnectedNoteIDs>
+        </Note>
+        <Note ID="12" FontSize="12.0" Position="542.0,400.0" Width="257.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Left Tray
+- Document
+— Scene List
+- Research
+— Scene List
+- Trash
+— Scene List</String>
+        </Note>
+        <Note ID="13" FontSize="12.0" Position="1090.484375,402.398438" Width="257.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Right Tray
+- Section Synopsis
+- Section Metadata
+- Section Notes</String>
+        </Note>
+        <Note ID="14" FontSize="12.0" Position="816.820312,470.0" Width="257.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Editor
+- formatting menu</String>
+        </Note>
+        <Note ID="15" FontSize="12.0" Position="816.972656,401.0" Width="257.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Kanban</String>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="817.570312,436.0" Width="257.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Outline</String>
+        </Note>
+        <Note ID="19" FontSize="12.0" Position="1093.066406,476.296875" Width="256.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Todo List</String>
+        </Note>
+        <Note ID="20" FontSize="12.0" Position="629.0,294.0" Width="53.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>todo_list</String>
+            <ConnectedNoteIDs>1, 21</ConnectedNoteIDs>
+        </Note>
+        <Note ID="21" FontSize="12.0" Position="755.0,303.0" Width="35.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Todo</String>
+            <ConnectedNoteIDs>20</ConnectedNoteIDs>
+        </Note>
+        <Note ID="22" FontSize="12.0" Position="211.417969,77.332031" Width="53.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>todo_list</String>
+            <ConnectedNoteIDs>8, 23</ConnectedNoteIDs>
+        </Note>
+        <Note ID="23" FontSize="12.0" Position="308.0,69.0" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>todo</String>
+            <ConnectedNoteIDs>22</ConnectedNoteIDs>
+        </Note>
+        <Note ID="24" FontSize="12.0" Position="543.0,521.0" Width="804.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Footer</String>
+        </Note>
+        <Note ID="25" FontSize="12.0" Position="545.0,368.0" Width="794.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Header</String>
         </Note>
     </Notes>
     <BackgroundShapes></BackgroundShapes>
-    <AutoFit>0-2</AutoFit>
+    <AutoFit>0-1, 6-9, 20-23</AutoFit>
     <NoteStyles>
         <Style Name="Blue Bubble" ID="DBBBFC94-9903-48A2-BF3B-13323F120BE1" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
             <BorderThickness>1</BorderThickness>
