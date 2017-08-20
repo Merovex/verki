@@ -13,11 +13,15 @@
     "tether": "^1.4.0"
   },
   "devDependencies": {
-    "devtron": "^1.4.0"
+    "devtron": "^1.4.0",
+    "electron-reload": "^1.2.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "xtest": "echo \"Error: no test specified\" && exit 1",
+    "xstart": "electron .",
+    "start": "tsc main.ts && electron main.js",
+    "clean": "rm -Rf *.log *.js",
+    "tsc:w": "tsc -w"
   },
   "repository": {
     "type": "git",
