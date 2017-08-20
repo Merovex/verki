@@ -1,14 +1,23 @@
 {
-  "name": "ancient-resonance",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "Scribesto",
+  "version": "0.1.0",
+  "main": "electron.js",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "xng": "ng",
+    "xstart": "ng serve",
+    "xbuild": "ng build",
+    "xtest": "ng test",
+    "xlint": "ng lint",
+    "xe2e": "ng e2e",
+    "xelectron": "tsc && concurrently \"npm run tsc:w\" \"electron .\" ",
+    "xtsc": "tsc src",
+    "xtsc:w": "tsc -w src",
+    "start": "npm run build.ng && npm run build.tasks && npm run build.electron && npm run start.electron",
+    "build.ng": "ng build --base-href .",
+    "build.tasks": "gulp build.tasks",
+    "build.electron": "gulp build.electron",
+    "build.tasks": "gulp build.tasks",
+    "build.watch": "gulp build.default"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +42,16 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.1.1",
+    "concurrently": "^3.5.0",
+    "electron": "^1.7.5",
+    "electron-window-state": "^4.1.1",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "gulp-run": "^1.7.1",
+    "gulp-shell": "^0.6.3",
+    "gulp-tsc": "^1.3.2",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
@@ -41,9 +60,14 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "load-gulp-tasks": "^0.1.0",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Merovex/verki.git"
   }
 }
