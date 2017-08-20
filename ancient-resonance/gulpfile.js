@@ -4,6 +4,10 @@ const typescript = require('gulp-tsc');
 const options = {
     pattern: ['tasks/**/*.js']
 };
+// const electron = require('electron-connect').server.create();
+
+// import * as url from 'url';
+// import * as electron from 'electron-connect';
 
 require('load-gulp-tasks')(gulp, options, {});
 

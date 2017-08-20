@@ -1,53 +1,60 @@
-import {
-	app,
-	BrowserWindow,
-  ipcMain,
-  screen
-}  from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
+import { client } from 'electron-connect';
 import * as path from 'path';
-import * as url from 'url';
 
-const debug = true;
-const windowStateKeeper = require('electron-window-state');
-let win: Electron.BrowserWindow;
+let applicationRef: Electron.BrowserWindow = null;
 
-if (debug) { require('electron-reload')(__dirname); }
+const debugMode = false;
 
-function createWindow() {
-  const {width, height} = screen.getPrimaryDisplay().workAreaSize;
-	let mainWindowState = windowStateKeeper({ defaultWidth: width, defaultHeight: height });
+const mainWindowSettings: Electron.BrowserWindowConstructorOptions = {
+    width: 800,
+    height: 550,
+    frame: true,
+    resizable: false
+};
 
-	// Create Browser Window, using windowStateKeeper.
-	win = new BrowserWindow({
-    'x': mainWindowState.x,
-    'y': mainWindowState.y,
-    'width': mainWindowState.width,
-    'height': mainWindowState.height
-	});
-	mainWindowState.manage(win);
-
- 	win.loadURL(`file://${__dirname}/src/index.html`) // load index.html
-
-	// open devtools
-	if (debug) {win.webContents.openDevTools();}
-
-  console.log(app.getName());
-	win.on('closed', function() { win = null; })
+function initMainListener() {
+    ipcMain.on('ELECTRON_BRIDGE_HOST', (event, msg) => {
+        console.log('msg received', msg);
+        if (msg === 'ping') {
+            event.sender.send('ELECTRON_BRIDGE_CLIENT', 'pong');
+        }
+    });
 }
 
-// APPLICATION EVENTS
-// ==================
+function createWindow() {
+    applicationRef = new BrowserWindow(mainWindowSettings);
+    applicationRef.loadURL(`file:///${__dirname}/index.html`);
+    if (debugMode) {
+        // Open the DevTools.
+        applicationRef.webContents.openDevTools();
+    }
+    applicationRef.on('closed', () => {
+        // Dereference the window object, usually you would store windows
+        // in an array if your app supports multi windows, this is the time
+        // when you should delete the corresponding element.
+        applicationRef = null;
+    });
+
+    initMainListener();
+
+    client.create(applicationRef);
+}
+
+
 app.on('ready', createWindow);
 
-// Quit when all windows are closed
-app.on('window-all-closed', function() {
-	if (process.platform != 'darwin') {
-		app.quit();
-	}
-})
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
+        // TODO perhaps hook this and wait for message bus before quitting?
+        app.quit();
+    }
+});
 
-app.on('activate', function () {
-  // On OS X it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
-  if (win === null) { createWindow() }
-})
+app.on('activate', () => {
+    // On macOS it's common to re-create a window in the app when the
+    // dock icon is clicked and there are no other windows open.
+    if (applicationRef === null) {
+        createWindow();
+    }
+});
