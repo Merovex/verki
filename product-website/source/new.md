@@ -1,6 +1,7 @@
 ---
 permalink: /new/
-title: "New Page"
+title: New Page
+layout: page
 ---
 
 # THis is a page
