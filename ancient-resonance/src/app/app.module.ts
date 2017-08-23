@@ -8,10 +8,20 @@ import { NgxElectronModule } from './ngx-electron/ngx-electron.module';
 import { AppRoutingModule } from './app-routing.module';
 import { WelcomeModule } from './welcome/welcome.module';
 import { AppComponent } from './app.component';
+import { ProjectComponent } from './project/project.component';
+import { SectionComponent } from './section/section.component';
+import { SectionListComponent } from './section-list/section-list.component';
+import { ManuscriptComponent } from './manuscript/manuscript.component';
+import { NotebookComponent } from './notebook/notebook.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        ProjectComponent,
+        SectionComponent,
+        SectionListComponent,
+        ManuscriptComponent,
+        NotebookComponent
     ],
     imports: [
         BrowserModule,
