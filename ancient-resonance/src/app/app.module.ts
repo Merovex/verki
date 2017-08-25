@@ -22,6 +22,8 @@ import { NotebookComponent } from './notebook/notebook.component';
 import { SpreadsheetComponent } from './desktop/spreadsheet/spreadsheet.component';
 import { KanbanCardComponent } from './desktop/kanban/kanban-card/kanban-card.component';
 import { KanbanListComponent } from './desktop/kanban/kanban-list/kanban-list.component';
+import { SpreadsheetListComponent } from './spreadsheet-list/spreadsheet-list.component';
+import { SpreadsheetRowComponent } from './spreadsheet-row/spreadsheet-row.component';
 
 @NgModule({
     declarations: [
@@ -37,7 +39,9 @@ import { KanbanListComponent } from './desktop/kanban/kanban-list/kanban-list.co
         KanbanComponent,
         SpreadsheetComponent,
         KanbanCardComponent,
-        KanbanListComponent
+        KanbanListComponent,
+        SpreadsheetListComponent,
+        SpreadsheetRowComponent
     ],
     imports: [
         BrowserModule,
