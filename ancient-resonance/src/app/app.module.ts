@@ -20,6 +20,8 @@ import { SectionListComponent } from './section/section-list/section-list.compon
 import { ManuscriptComponent } from './manuscript/manuscript.component';
 import { NotebookComponent } from './notebook/notebook.component';
 import { SpreadsheetComponent } from './desktop/spreadsheet/spreadsheet.component';
+import { KanbanCardComponent } from './desktop/kanban/kanban-card/kanban-card.component';
+import { KanbanListComponent } from './desktop/kanban/kanban-list/kanban-list.component';
 
 @NgModule({
     declarations: [
@@ -33,7 +35,9 @@ import { SpreadsheetComponent } from './desktop/spreadsheet/spreadsheet.componen
         ToolTrayComponent,
         EditorComponent,
         KanbanComponent,
-        SpreadsheetComponent
+        SpreadsheetComponent,
+        KanbanCardComponent,
+        KanbanListComponent
     ],
     imports: [
         BrowserModule,
