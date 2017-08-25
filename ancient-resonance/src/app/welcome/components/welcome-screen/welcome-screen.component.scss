@@ -1,8 +1,9 @@
 
 :host {
-    background: url(https://angular.io/resources/images/backgrounds/super-hero-large.png) no-repeat bottom center,-webkit-linear-gradient(305deg,#0D47A1,#42A5F5);
-    background: url(https://angular.io/resources/images/backgrounds/super-hero-large.png) no-repeat bottom center,linear-gradient(145deg,#0D47A1,#42A5F5);
-    background-blend-mode: multiply;
+  background: -webkit-linear-gradient(-45deg, #469129, #33691e); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-45deg, #469129, #33691e); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-45deg, #469129, #33691e); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-45deg, #469129, #33691e);
     display:block;
     background-size: 100%;
     padding:48px 48px 32px 48px;

@@ -10,7 +10,7 @@ export class GettingStartedComponent {
 
     constructor(private electron: NgxElectronService) {}
 
-    viewAngular(): void {
+    viewDesktop(): void {
         this.electron.shell.openExternal('https://angular.io/docs/ts/latest/');
     }
 
