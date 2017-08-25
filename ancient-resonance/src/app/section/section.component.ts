@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'seed-section',
+  selector: 'scribesto-section',
   templateUrl: './section.component.html',
   styleUrls: ['./section.component.scss']
 })

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgxElectronService } from './../../../ngx-electron/ngx-electron.service';
 
 @Component({
-    selector: 'seed-welcome-screen',
+    selector: 'scribesto-welcome-screen',
     templateUrl: './welcome-screen.component.html',
     styleUrls: ['./welcome-screen.component.scss']
 })

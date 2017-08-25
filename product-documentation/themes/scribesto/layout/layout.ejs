@@ -1,0 +1,8 @@
+<%- partial('_partial/head') %>
+<body>
+  <%- partial('_partial/masthead') %>
+  <%- body %>
+  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/inline-scripts') %>
+</body>
+</html>

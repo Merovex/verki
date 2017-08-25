@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'seed-notebook',
+  selector: 'scribesto-notebook',
   templateUrl: './notebook.component.html',
   styleUrls: ['./notebook.component.scss']
 })

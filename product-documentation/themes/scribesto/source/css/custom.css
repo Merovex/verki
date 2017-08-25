@@ -1,0 +1,85 @@
+/**
+ * Custom Bootstrap and Theme Overrides
+ *
+ * Bootstrap designers: Feel free to remove all of the styles in this
+ * file to start a fresh new design. Most of the critical/functional
+ * styles are found within the other CSS files, with this one included last.
+ *
+ * Bootstrap and Hexo markdown style overrides would typically happen here.
+ */
+
+/* Globals */
+body {
+  padding-top: 65px !important;
+  color: #111;
+  font-size: 17px;
+}
+.jumbotron {
+  height: calc(100vh - 61px);
+  margin-top: -3px;
+  color: white;
+  font-weight: 100;
+}
+.jumbotron img {
+  width: 100%;
+}
+.jumbotron .header {
+  font-size: 3em;
+  font-weight: 100;
+  text-align: center;
+}
+.pg-green-back {
+  background: #33691e;
+}
+.pg-green {
+  color: #33691e;
+}
+h1, h2 {
+  color: #33691e;
+}
+#features {
+  border-top: 2px solid #CCC  ;
+}
+#features h2 {
+  margin: 1in 0;
+}
+.navbar-brand {
+  color: #FFF !important;
+  font-size: 2.0em;
+  font-weight: 200;
+}
+a.nav-link {
+  color: rgba(255,255,255,0.65) !important;
+}
+a.nav-link:hover, a.nav-link:active {
+  color: rgba(255,255,255,1.0) !important;
+}
+.navbar-brand img {
+  fill: #FFF;
+  margin-top: -5px
+}
+.indigo-back {
+  background: #4527a0;
+}
+.indigo {
+  color: #4527a0;
+}
+a {
+  color: #7953d2;
+}
+.btn-outline-white {
+  color: rgba(255,255,255,0.65);
+  background-color: transparent;
+  background-image: none;
+  border-color: rgba(255,255,255,0.65);
+}
+.btn-outline-white:hover {
+  background-color: rgba(255,255,255,0.65) !important;
+  color: #33691e;
+}
+.svg-center {
+  display: block;
+  margin-bottom: 30px;
+  text-align: center;
+  justify-content: center;
+}

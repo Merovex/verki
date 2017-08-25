@@ -2,7 +2,7 @@ import { NgxElectronService } from './../../../ngx-electron/ngx-electron.service
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'seed-getting-started',
+  selector: 'scribesto-getting-started',
   templateUrl: './getting-started.component.html',
   styleUrls: ['./getting-started.component.scss']
 })

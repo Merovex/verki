@@ -4,7 +4,7 @@ import { GettingStartedComponent } from './getting-started.component';
 import { NgxElectronService } from '../../../ngx-electron/ngx-electron.service';
 
 @Component({
-    selector: 'seed-card',
+    selector: 'scribesto-card',
     template: ``
 })
 class MockCardComponent {

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'seed-card',
+  selector: 'scribesto-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })

@@ -5,6 +5,7 @@ import * as path from 'path';
 let applicationRef: Electron.BrowserWindow = null;
 
 const debugMode = false;
+const startTime = Date.now();
 
 const mainWindowSettings: Electron.BrowserWindowConstructorOptions = {
     width: 800,

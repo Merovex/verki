@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'seed-manuscript',
+  selector: 'scribesto-manuscript',
   templateUrl: './manuscript.component.html',
   styleUrls: ['./manuscript.component.scss']
 })

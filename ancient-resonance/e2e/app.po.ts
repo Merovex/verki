@@ -6,6 +6,6 @@ export class AngularElectronSeedPage {
   }
 
   getParagraphText() {
-    return element(by.css('seed-root')).getText();
+    return element(by.css('scribesto-root')).getText();
   }
 }
