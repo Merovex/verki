@@ -1,6 +1,6 @@
-# Angular Electron Seed
+# Angular Electron scribesto
 
-This seed combines the technologies of Angular (4+) with [Electron](https://electron.atom.io/) to create a robust development stack for creating Desktop applications. Leveraging the stock AngularCLI build process, we are able to maintain webpack and stock tooling with minimal tweaking.
+This scribesto combines the technologies of Angular (4+) with [Electron](https://electron.atom.io/) to create a robust development stack for creating Desktop applications. Leveraging the stock AngularCLI build process, we are able to maintain webpack and stock tooling with minimal tweaking.
 
 ![Example](https://i.gyazo.com/67c230a5f92509f703eaf03a38590613.gif)
 
@@ -29,7 +29,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
-## Built with Angular Electron Seed
+## Built with Angular Electron scribesto
 - [Google Sidekick](https://github.com/sean-perkins/google-sidekick)
 
 # Contributors 

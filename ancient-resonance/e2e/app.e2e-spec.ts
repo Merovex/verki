@@ -1,10 +1,10 @@
-import { AngularElectronSeedPage } from './app.po';
+import { AngularElectronscribestoPage } from './app.po';
 
-describe('angular-electron-seed App', () => {
-  let page: AngularElectronSeedPage;
+describe('angular-electron-scribesto App', () => {
+  let page: AngularElectronscribestoPage;
 
   beforeEach(() => {
-    page = new AngularElectronSeedPage();
+    page = new AngularElectronscribestoPage();
   });
 
   it('should display message saying app works', () => {

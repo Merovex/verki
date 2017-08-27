@@ -1,11 +1,11 @@
 import { browser, element, by } from 'protractor';
 
-export class AngularElectronSeedPage {
+export class AngularElectronscribestoPage {
   navigateTo() {
     return browser.get('/');
   }
 
   getParagraphText() {
-    return element(by.css('seed-root')).getText();
+    return element(by.css('scribesto-root')).getText();
   }
 }
