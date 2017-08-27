@@ -7,6 +7,7 @@ import { NgxElectronModule } from './ngx-electron/ngx-electron.module';
 // app
 import { AppRoutingModule } from './app-routing.module';
 import { WelcomeModule } from './welcome/welcome.module';
+import { WorkspaceModule } from './workspace/workspace.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
         AppRoutingModule,
         NgxElectronModule,
         WelcomeModule,
+        WorkspaceModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
