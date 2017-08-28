@@ -6,9 +6,11 @@ import { AppRoutes } from './app.routes';
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(AppRoutes, { useHash: true })
+        RouterModule.forRoot(AppRoutes, {
+          useHash: true,
+          enableTracing: true
+        })
     ],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
