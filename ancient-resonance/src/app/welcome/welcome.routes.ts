@@ -4,12 +4,6 @@ import { WelcomeScreenComponent, GettingStartedComponent } from './components/in
 
 
 export const WelcomeRoutes: Routes = [
-    {
-        path: 'welcome',
-        component: WelcomeScreenComponent
-    },
-    {
-        path: 'getting-started',
-        component: GettingStartedComponent
-    }
+    { path: 'welcome', component: WelcomeScreenComponent },
+    { path: 'getting-started', component: GettingStartedComponent }
 ];

@@ -1,5 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 body {
     margin:0;
     font-family: "Roboto","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif
+}
+.dev {
+  border: 1px solid red;
+}
+aside {
+  height: 100vh;
+  border: 1px solid red;
+}
+.scroll-y {
+  overflow-y: scroll;
+}
+h2 { font-size: 1rem; }
+.notebook {
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      font-size: 0.9rem;
+      list-style: none;
+    }
+  }
 }
