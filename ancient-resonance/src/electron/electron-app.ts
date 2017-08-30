@@ -2,7 +2,7 @@ import { app, BrowserWindow, ipcMain, Menu } from 'electron';
 import { client } from 'electron-connect';
 import * as path from 'path';
 
-let applicationRef: Electron.BrowserWindow = null;
+let win: Electron.BrowserWindow = null;
 
 const debugMode = true;
 
@@ -10,9 +10,17 @@ const mainWindowSettings: Electron.BrowserWindowConstructorOptions = {
     width: 1024,
     height: 800,
     frame: true,
-    resizable: false
+    resizable: true,
+    webPreferences: {
+      textAreasAreResizable: false
+    },
 };
-
+function oExt(url: string) {
+  require('electron').shell.openExternal(url)
+}
+function getSelectionText() {
+  win.webContents.send('getSelectionText', '');
+}
 function createElectronMenu() {
   var menuTemplate = [];
   menuTemplate.unshift(
@@ -22,7 +30,7 @@ function createElectronMenu() {
            { label: 'Change Log'  },
            { label: 'Update'  },
            { type: 'separator' },
-           { label: 'Preferences'  },
+           { label: 'Preferences', accelerator: 'CmdOrCtrl+,' },
            { type: 'separator' },
            { role: 'quit' },
        ],
@@ -48,9 +56,10 @@ function createElectronMenu() {
            { role: 'copy'  },
            { role: 'paste'  },
            { type: 'separator'},
-           { label: 'Dictonary', click() { console.log('dictionary') } },
-           { label: 'Thesaurus', click() { console.log('thesaurus') } },
-           { label: 'Wikipedia', click() { console.log('wikipedia') } },
+          //  { label: 'Dictonary', click() { oExt(`http://www.dictionary.com/browse/${getSelectionText()}`) } },
+           { label: 'Dictionary', click() { win.webContents.send('getSelectionText', 'http://www.dictionary.com/browse/') } },
+           { label: 'Thesaurus', click() { win.webContents.send('getSelectionText', 'http://www.thesaurus.com/browse/') } },
+           { label: 'Wikipedia', click() { win.webContents.send('getSelectionText', 'https://en.wikipedia.org/w/index.php?search=') } },
            { type: 'separator'},
            { label: 'Find',
              submenu: [
@@ -128,24 +137,23 @@ function initMainListener() {
 }
 
 function createWindow() {
-    applicationRef = new BrowserWindow(mainWindowSettings);
-    applicationRef.loadURL(`file:///${__dirname}/index.html`);
-    // if (debugMode) {
+    win = new BrowserWindow(mainWindowSettings);
+    win.loadURL(`file:///${__dirname}/index.html`);
+    win.webContents.openDevTools()
     if (debugMode) {
         // Open the DevTools.
-        applicationRef.webContents.openDevTools();
+        win.webContents.openDevTools();
     }
-    applicationRef.on('closed', () => {
+    win.on('closed', () => {
         // Dereference the window object, usually you would store windows
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
-        applicationRef = null;
+        win = null;
     });
 
     initMainListener();
     createElectronMenu();
-    client.create(applicationRef);
-    // console.log(`${__dirname}`)
+    client.create(win);
 }
 
 
@@ -161,7 +169,10 @@ app.on('window-all-closed', () => {
 app.on('activate', () => {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (applicationRef === null) {
+    if (win === null) {
         createWindow();
     }
+});
+ipcMain.on('selected-text', function(e, arg) {
+  oExt(arg.msg)
 });

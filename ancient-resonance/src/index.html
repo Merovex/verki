@@ -7,6 +7,16 @@
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+    		// var ipc = require('ipc');
+        var ipc = require('electron').ipcRenderer;
+        var text = window.getSelection();
+        ipc.on('getSelectionText', function(arg,url) {
+      		console.log('Sending '+url+':'+text);
+            ipc.send('selected-text', {msg: url+encodeURIComponent(text)})
+          // }
+      	});
+    </script>
 </head>
 
 <body>
