@@ -7,8 +7,8 @@ let applicationRef: Electron.BrowserWindow = null;
 const debugMode = false;
 
 const mainWindowSettings: Electron.BrowserWindowConstructorOptions = {
-    width: 800,
-    height: 550,
+    width: 1024,
+    height: 800,
     frame: true,
     resizable: false
 };

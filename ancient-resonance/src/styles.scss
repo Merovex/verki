@@ -1,27 +1,115 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
 body {
-    margin:0;
-    font-family: "Roboto","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
-.dev {
-  border: 1px solid red;
+.dev { border: 1px solid red; }
+
+header {
+  background: #334;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+}
+header,
+.header,
+.footer {
+  line-height: 18px;
+  a.action {
+    height: 30px;
+    width: 30px;
+    -webkit-align-items: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 20px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-decoration: none;
+    &:hover { background: #003; }
+  }
+}
+nav, main, aside {
+  position: absolute;
+  top: 50px;
+  bottom: auto;
+  height: calc(100% - 50px);
+}
+nav {
+  width: 285px;
+  left: 0;
+  right: 285px;
+  background: #FFDDDD;
+}
+main {
+  left: 285px;
+  right: 285px;
+  background: #FEFEFE;
 }
 aside {
-  height: 100vh;
-  border: 1px solid red;
+  right: 0;
+  width: 285px;
+  background: #DDFFDD;
 }
-.scroll-y {
-  overflow-y: scroll;
+#a-expand {
+  display: none;
 }
-h2 { font-size: 1rem; }
-.notebook {
-  ul {
-    margin: 0;
-    padding: 0;
-    li {
-      font-size: 0.9rem;
-      list-style: none;
-    }
+.nav-collapse {
+  nav  { width: 50px; }
+  main { left: 50px; }
+  #a-compress { display:none; }
+  #a-expand { display:flex; }
+}
+.aside-hidden {
+  aside { display: none; }
+  main  { right: 0; }
+}
+.show-footer {
+  main, nav, aside { height: calc(100% - 100px ); }
+  footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    background: #FFFFDD;
+    left: 0;
+    right: 0;
+    top: auto;
   }
+}
+nav .header,
+nav .footer,
+aside .header,
+aside .footer,
+main .header,
+main .footer {
+  background: #303A46;
+  height: 44px;
+}
+nav .body,
+aside .body,
+main .body {
+  height: calc(100% - 88px);
+  overflow-y: auto;
+  overflow-x: hide;
+}
+aside .header,
+aside .footer {
+  background: #303A46;
+}
+main .header,
+main .footer {
+  background: #DDDDDD;
+}
+nav .footer,
+aside .footer {
+}
+.hidden {
+  display: none !important;
 }

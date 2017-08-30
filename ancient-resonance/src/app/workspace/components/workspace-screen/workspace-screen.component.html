@@ -1,48 +1,52 @@
-<div class="container-fluid">
-  <div class="row">
-    <aside class="toolbar col col-sm-1">
-      Toolbar
-    </aside>
-    <aside class="notebook col col-sm-3 scroll-y">
-      <h2>Notebook</h2>
-      <ul>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-        <li>ipsum lorem</li>
-      </ul>
-    </aside>
-    <main class='col editor col-sm-5 scroll-y'>
-      <h2>Editor</h2>
-    </main>
-    <aside class="detail col col-sm-3 scroll-y">
-      <h2>Synopsis</h2>
-    </aside>
-  </div>
-</div>
+<body class='nav-collapse aside-hidden xshow-footer'>
+  <header class='container-fluid'>
+      <div class="d-flex justify-content-end">
+        <div class='p-2 mr-auto'>&nbsp;</div>
+        <div class="p-2">
+            <a href='#' class='action'><i class="fa fa-file-text"  aria-hidden="true" placement="bottom" ngbTooltip="Editor"></i></a>
+        </div>
+        <div class="p-2">
+            <a href='#' class='action'><i class="fa fa-list-alt" aria-hidden="true" placement="bottom" ngbTooltip="Spreadsheet"></i></a>
+        </div>
+        <div class="p-2">
+            <a href='#' class='action'><i class="fa fa-newspaper-o" aria-hidden="true" placement="bottom" ngbTooltip="Kanban"></i></a>
+        </div>
+        <div class="p-2">
+            <a href='#' class='action'><i class="fa fa-info-circle" aria-hidden="true" placement="bottom" ngbTooltip="Synopsis"></i></a>
+        </div>
+        <div class="p-2">
+            <a href='#' class='action'><i class="fa fa-cog" aria-hidden="true" placement="bottom" ngbTooltip="Compile"></i></a>
+        </div>
+      </div>
+  </header>
+  <nav>
+    <div class='header'>Head</div>
+    <div class='body'>Body</div>
+    <div class='footer d-flex flex-row-reverse'>
+      <div class='p-2' id='a-compress'>
+        <a href='#' class='action'><i class="fa fa-compress" aria-hidden="true"></i></a>
+      </div>
+      <div class='p-2' id='a-expand'>
+        <a href='#' class='action'><i class="fa fa-expand" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class='header'>Head</div>
+    <div class='body'>Body</div>
+    <div class='footer'>Foot</div>
+  </main>
+
+  <aside>
+    <div class='header'>Head</div>
+    <div class='body'>Body</div>
+    <div class='footer d-flex flex-row'>
+      <div class="p-2">
+        <a href='#' class='action'><i class="fa fa-compress" aria-hidden="true"></i></a>
+      </div>
+    </div>
+</aside>
+  <footer class=''>
+FOOTER
+  </footer>
+</body>

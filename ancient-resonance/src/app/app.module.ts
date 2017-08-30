@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 // electron
 import { NgxElectronModule } from './ngx-electron/ngx-electron.module';
+// bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // app
 import { WelcomeModule } from './welcome/welcome.module';
 import { WorkspaceModule } from './workspace/workspace.module';
@@ -23,6 +25,7 @@ import { AppComponent } from './app.component';
         WelcomeModule,
         WorkspaceModule,
         AppRoutingModule,
+        NgbModule.forRoot(),
     ],
     providers: [],
     bootstrap: [AppComponent]
