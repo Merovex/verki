@@ -1,10 +1,10 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow, ipcMain, Menu } from 'electron';
 import { client } from 'electron-connect';
 import * as path from 'path';
 
 let applicationRef: Electron.BrowserWindow = null;
 
-const debugMode = false;
+const debugMode = true;
 
 const mainWindowSettings: Electron.BrowserWindowConstructorOptions = {
     width: 1024,
@@ -12,6 +12,111 @@ const mainWindowSettings: Electron.BrowserWindowConstructorOptions = {
     frame: true,
     resizable: false
 };
+
+function createElectronMenu() {
+  var menuTemplate = [];
+  menuTemplate.unshift(
+     { label: 'Scribesto',
+       submenu: [
+           { label: `About ${app.getName()} ${app.getVersion()}`, role: 'about' },
+           { label: 'Change Log'  },
+           { label: 'Update'  },
+           { type: 'separator' },
+           { label: 'Preferences'  },
+           { type: 'separator' },
+           { role: 'quit' },
+       ],
+     },
+     { label: 'File',
+       submenu: [
+           { label: 'New Project' },
+           { label: 'Open Project' },
+           { label: 'Recent Projects' },
+           { type: 'separator' },
+           { label: 'Close Project' },
+           { label: 'Close All' },
+           { label: 'Save' },
+           { label: 'Save As' },
+       ],
+     },
+     { label: 'Edit',
+       submenu: [
+           { role: 'undo'  },
+           { role: 'redo'  },
+           { type: 'separator'},
+           { role: 'cut'  },
+           { role: 'copy'  },
+           { role: 'paste'  },
+           { type: 'separator'},
+           { label: 'Dictonary', click() { console.log('dictionary') } },
+           { label: 'Thesaurus', click() { console.log('thesaurus') } },
+           { label: 'Wikipedia', click() { console.log('wikipedia') } },
+           { type: 'separator'},
+           { label: 'Find',
+             submenu: [
+               { label: 'Find'  },
+               { label: 'Find Next'  },
+               { label: 'Find Previous'  },
+             ]
+           }
+       ],
+     },
+     { label: 'Project',
+       submenu: [
+           { label: 'New Text' },
+           { label: 'New Collection' },
+           { label: 'New from Template' },
+           { type: 'separator' },
+           { label: 'Project Metadata' },
+           { label: 'Project Statistics' },
+           { label: 'Text Statistics' },
+           { label: 'Project Statistics' },
+       ],
+     },
+     { label: 'View',
+        submenu: [
+          {role: 'reload'},
+          {role: 'forcereload'},
+          {role: 'toggledevtools'},
+          {type: 'separator'},
+          {role: 'resetzoom'},
+          {role: 'zoomin'},
+          {role: 'zoomout'},
+          {type: 'separator'},
+          {role: 'togglefullscreen'}
+        ]
+     },
+     { label: 'Help',
+       submenu: [
+           { label: 'Search' },
+           { type: 'separator' },
+           { label: 'Documentation' },
+           { label: 'Tutorials' },
+           { label: 'Community' },
+           { label: 'Report Flaw' },
+           { type: 'separator' },
+           { label: 'Acknowledgements' },
+           { type: 'separator' },
+           { label: `Welcome to ${app.getName()}` },
+           { label: 'Register / Remove License'  },
+       ],
+     }
+  );
+  if (process.platform === 'darwin') {
+    // Edit menu
+    menuTemplate[2].submenu.push(
+      {type: 'separator'},
+      { label: 'Speech',
+        submenu: [
+          {role: 'startspeaking'},
+          {role: 'stopspeaking'}
+      ]}
+    );
+  }
+
+  var menu = Menu.buildFromTemplate(menuTemplate);
+  Menu.setApplicationMenu(menu);
+}
 
 function initMainListener() {
     ipcMain.on('ELECTRON_BRIDGE_HOST', (event, msg) => {
@@ -26,7 +131,7 @@ function createWindow() {
     applicationRef = new BrowserWindow(mainWindowSettings);
     applicationRef.loadURL(`file:///${__dirname}/index.html`);
     // if (debugMode) {
-    if (true) {
+    if (debugMode) {
         // Open the DevTools.
         applicationRef.webContents.openDevTools();
     }
@@ -38,8 +143,9 @@ function createWindow() {
     });
 
     initMainListener();
-
+    createElectronMenu();
     client.create(applicationRef);
+    // console.log(`${__dirname}`)
 }
 
 
