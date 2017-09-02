@@ -1,12 +1,12 @@
-'use strict'
+'use strict';
 
 const
   electron = require('electron'),
   path = require('path'),
   app = electron.app,
-  BrowserWindow = electron.BrowserWindow
+  BrowserWindow = electron.BrowserWindow;
 
-let mainWindow
+let mainWindow;
 
 function createWindow () {
   /**
@@ -15,13 +15,13 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     height: 600,
     width: 800
-  })
+  });
 
   mainWindow.loadURL(
     process.env.NODE_ENV === 'production'
     ? `file://${__dirname}/index.html`
     : `http://localhost:${process.env.PORT || require('../../config').dev.port}`
-  )
+  );
 
   if (process.env.NODE_ENV === 'development') {
     BrowserWindow.addDevToolsExtension(path.join(__dirname, '../node_modules/devtron'))
@@ -35,19 +35,19 @@ function createWindow () {
 
   mainWindow.on('closed', () => {
     mainWindow = null
-  })
+  });
 }
 
-app.on('ready', createWindow)
+app.on('ready', createWindow);
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
   }
-})
+});
 
 app.on('activate', () => {
   if (mainWindow === null) {
     createWindow()
   }
-})
+});
