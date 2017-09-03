@@ -1,24 +1,34 @@
 <template>
   <q-layout
     ref="layout"
-    view="lHh Lpr fff"
+    view="lHr LpR fff"
     :left-class="{'bg-grey-2': true}"
+    :right-class="{'bg-grey-2': true}"
   >
-    <q-toolbar slot="header" class="glossy">
+    <q-toolbar slot="header">
       <q-btn
         flat
         @click="$refs.layout.toggleLeft()"
       >
-        <q-icon name="menu" />
+        <q-icon name="view_list" />
       </q-btn>
 
       <q-toolbar-title>
-        Quasar App
+        Scribesto
         <div slot="subtitle">Running on Quasar v{{$q.version}}</div>
       </q-toolbar-title>
+      <q-btn>
+        <q-icon flat name="view_module" />
+      </q-btn>
+      <q-btn>
+        <q-icon flat name="dvr" />
+      </q-btn>
+      <q-btn flat @click="$refs.layout.toggleRight()">
+        <q-icon name="chat" />
+      </q-btn>
     </q-toolbar>
 
-    <div slot="left">
+    <nav slot="left">
       <!--
         Use <q-side-link> component
         instead of <q-item> for
@@ -44,18 +54,23 @@
           <q-item-main label="Twitter" sublabel="@quasarframework" />
         </q-item>
       </q-list>
-    </div>
+    </nav>
 
     <!--
       Replace following <div> with
       <router-view /> component
       if using subRoutes
     -->
-    <div class="layout-padding logo-container non-selectable no-pointer-events">
+    <main class="layout-padding logo-container non-selectable no-pointer-events">
       <div class="logo" :style="position">
         <img src="~assets/quasar-logo-full.svg">
       </div>
-    </div>
+    </main>
+    <aside slot='right'>
+      Metadata
+      Synopsis
+      Notes
+    </aside>
   </q-layout>
 </template>
 
