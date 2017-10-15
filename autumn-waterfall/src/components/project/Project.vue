@@ -10,7 +10,7 @@
     data: function() {
       return {
         name: 'Max'
-      ;}
+      };
     },
     methods: {
 
