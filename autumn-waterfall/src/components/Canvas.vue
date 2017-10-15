@@ -19,6 +19,10 @@
         <div slot="subtitle">Running on Quasar v{{$q.version}}</div>
       </q-toolbar-title>
       <q-btn>
+        <q-icon flat name="subject" />
+        <q-tooltip :delay="750" :offset="[10, 10]">Editor</q-tooltip>
+      </q-btn>
+      <q-btn>
         <q-icon flat name="view_module" />
         <q-tooltip :delay="750" :offset="[10, 10]">Kanban</q-tooltip>
       </q-btn>
