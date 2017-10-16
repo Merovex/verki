@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle verki-atom",
+        "command": "verki-atom:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "verki-atom",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "verki-atom:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
