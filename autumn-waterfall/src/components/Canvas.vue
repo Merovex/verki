@@ -42,160 +42,12 @@
         instead of <q-item> for
         internal vue-router navigation
       -->
-
+      <binder></binder>
       <q-list no-border link inset-delimiter>
         <q-list-header>Essential Links</q-list-header>
         <q-item @click="launch('http://quasar-framework.org')">
           <q-item-side icon="school" />
           <q-item-main label="Docs" sublabel="quasar-framework.org" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
-        </q-item>
-        <q-item @click="launch('http://forum.quasar-framework.org')">
-          <q-item-main label="At vero eos et accusamus" sublabel='label label' />
-          <q-item-side icon="record_voice_over" />
         </q-item>
         <q-item @click="launch('http://forum.quasar-framework.org')">
           <q-item-main label="At vero eos et accusamus" sublabel='label label' />
@@ -239,6 +91,7 @@ import {
   QItemSide,
   QItemMain
 } from 'quasar'
+import Binder from './binder/Binder.vue'
 
 const
   { viewport } = dom,
@@ -272,7 +125,9 @@ export default {
     QInput,
     QItem,
     QItemSide,
-    QItemMain
+    QItemMain,
+
+    Binder
   },
   data () {
     return {
